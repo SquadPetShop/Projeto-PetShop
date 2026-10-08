@@ -11,10 +11,12 @@ namespace Projeto_LojaPet.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Clientes()
         {
-            return View();
+            var clientes = Simulacao.ClientesList;
+            return View(clientes);
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
